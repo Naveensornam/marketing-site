@@ -1,11 +1,16 @@
 :root {
   --primary: #2563eb;
   --primary-dark: #1d4ed8;
+  --primary-light: #60a5fa;
   --text-main: #0f172a;
   --text-muted: #64748b;
   --border-color: #e2e8f0;
   --bg-alt: #f8fafc;
   --bg-dark: #0f172a;
+  --bg-dark-card: #1e293b;
+  --text-on-dark: #f1f5f9;
+  --text-on-dark-muted: #94a3b8;
+  --border-on-dark: rgba(255, 255, 255, 0.1);
   --radius-lg: 12px;
   --radius-md: 8px;
   --max-width: 1160px;
@@ -139,14 +144,26 @@ p {
   color: var(--primary);
 }
 
+.btn-secondary-dark {
+  background: transparent;
+  color: var(--text-on-dark);
+  border-color: var(--border-on-dark);
+}
+
+.btn-secondary-dark:hover {
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+}
+
 /* ---------- Nav ---------- */
 .nav {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-on-dark);
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(8px);
   z-index: 50;
+  color: var(--text-on-dark);
 }
 
 .nav-inner {
@@ -186,7 +203,7 @@ p {
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 .nav-links-desktop {
@@ -199,7 +216,7 @@ p {
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
-  color: var(--text-main);
+  color: var(--text-on-dark);
 }
 
 .nav-mobile {
@@ -207,7 +224,7 @@ p {
   flex-direction: column;
   gap: 16px;
   padding: 16px 20px 24px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-on-dark);
 }
 
 .nav-mobile a,
@@ -223,7 +240,9 @@ p {
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 56px 0 64px;
+  padding: 64px 0 80px;
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
 }
 
 .hero .container {
@@ -241,12 +260,13 @@ p {
 .hero h1 {
   font-size: 2.75rem;
   line-height: 1.15;
+  color: var(--text-on-dark);
 }
 
 .hero-subtitle {
   margin-top: 16px;
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
@@ -271,13 +291,14 @@ p {
 }
 
 .popular-label {
-  color: var(--text-muted);
+  color: var(--text-on-dark-muted);
   margin-right: 4px;
 }
 
 .role-pill {
-  background: var(--bg-alt);
-  border: 1px solid var(--border-color);
+  background: var(--bg-dark-card);
+  color: var(--text-on-dark);
+  border: 1px solid var(--border-on-dark);
   border-radius: 999px;
   padding: 6px 14px;
   font-weight: 500;

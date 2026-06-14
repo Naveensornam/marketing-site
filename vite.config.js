@@ -6,5 +6,5 @@ import react from "@vitejs/plugin-react";
 // set base to "/my-agency/"
 export default defineConfig({
   plugins: [react()],
-  base: "/marketing-site/",
+  base: "/manpower-landing/",
 });

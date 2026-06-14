@@ -259,7 +259,7 @@ function Hero() {
             <a href={h.primaryCta.href} className="btn btn-primary">
               {h.primaryCta.label}
             </a>
-            <a href={h.secondaryCta.href} className="btn btn-secondary">
+            <a href={h.secondaryCta.href} className="btn btn-secondary-dark">
               {h.secondaryCta.label}
             </a>
           </div>
